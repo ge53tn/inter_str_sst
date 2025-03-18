@@ -28,7 +28,7 @@ addLayers       false;
 // - to 'snap' the mesh boundary to the surface
 geometry
 {
-    	Inlet.stl {type triSurfaceMesh; name Inlet2;}
+    	Inlet.stl {type triSurfaceMesh; name Inlet;}
 	Outlet.stl {type triSurfaceMesh; name Outlet;}
 	Open.stl {type triSurfaceMesh; name Open;}
 	Wall.stl {type triSurfaceMesh; name Wall;}

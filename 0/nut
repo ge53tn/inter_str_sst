@@ -22,13 +22,7 @@ internalField   uniform 0;
 boundaryField
 {
 
-    Inlet2
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-
-    Inlet1
+    Inlet
     {
         type            calculated;
         value           uniform 0;

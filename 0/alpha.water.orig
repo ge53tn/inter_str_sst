@@ -20,12 +20,7 @@ internalField   uniform 0;
 
 boundaryField
 {
-    Inlet1
-    {
-        type            zeroGradient;
-    }
-
-    Inlet2
+    Inlet
     {
         type            zeroGradient;
     }

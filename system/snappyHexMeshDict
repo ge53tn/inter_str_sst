@@ -28,8 +28,7 @@ addLayers       false;
 // - to 'snap' the mesh boundary to the surface
 geometry
 {
-    	Inlet1.stl {type triSurfaceMesh; name Inlet1;}
-    	Inlet2.stl {type triSurfaceMesh; name Inlet2;}
+    	Inlet.stl {type triSurfaceMesh; name Inlet2;}
 	Outlet.stl {type triSurfaceMesh; name Outlet;}
 	Open.stl {type triSurfaceMesh; name Open;}
 	Wall.stl {type triSurfaceMesh; name Wall;}
@@ -84,8 +83,7 @@ castellatedMeshControls
     // This is a featureEdgeMesh, read from constant/triSurface for now.
     features
     (
-        {file "Inlet1.eMesh";level 0;}
-        {file "Inlet2.eMesh";level 0;}
+        {file "Inlet.eMesh";level 0;}
         {file "Outlet.eMesh";level 0;}
         {file "Open.eMesh";level 0;}
         {file "Wall.eMesh";level 0;}
@@ -104,8 +102,7 @@ castellatedMeshControls
 
     refinementSurfaces
     {
-        Inlet1 {level (0 0);}
-        Inlet2 {level (0 0);}
+        Inlet {level (0 0);}
         Outlet {level (0 0);}
         Open {level (0 0);}
         Wall {level (0 0);}      
@@ -129,8 +126,9 @@ castellatedMeshControls
     // - outside. Same but cells outside.
 
     refinementRegions 
-	{Volume {mode distance; levels ((0.01 2) (0.05 1));
-        }
+	{
+Volume {mode distance; levels ((0.5 1) (2 1)); }
+        
     }
 
 
@@ -142,7 +140,7 @@ castellatedMeshControls
     // section reachable from the locationInMesh is kept.
     // NOTE: This point should never be on a face, always inside a cell, even
     // after refinement.
-    locationInMesh (4 1 1);
+    locationInMesh (15 0.5 1);
 
 
     // Whether any faceZones (as specified in the refinementSurfaces)

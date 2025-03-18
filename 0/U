@@ -21,16 +21,10 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    Inlet1
+    Inlet
     {
         type            fixedValue;
-	value		uniform (0 0 0.22);
-    }
-
-    Inlet2
-    {
-        type            fixedValue;
-	value		uniform (-2.5 0 0);
+	value		uniform (1.29 0 0);
     }
 
     Outlet

@@ -14,15 +14,8 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-Inlet1.stl
-{
-    extractionMethod	extractFromSurface; // extractFromFile or extractFromSurface
-    extractFromSurfaceCoeffs
-    {includedAngle   150;}
-    writeObj                yes;   // Write options
-}
 
-Inlet2.stl
+Inlet.stl
 {
     extractionMethod	extractFromSurface; // extractFromFile or extractFromSurface
     extractFromSurfaceCoeffs

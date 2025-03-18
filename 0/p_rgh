@@ -20,12 +20,8 @@ internalField   uniform 0;
 
 boundaryField
 {
-    Inlet1
-    {
-        type            zeroGradient;
-    }
-
-    Inlet2
+    
+    Inlet
     {
         type            zeroGradient;
     }
@@ -33,7 +29,7 @@ boundaryField
     Outlet
     {
         type            totalPressure;
-        p0              uniform 11380;
+        p0              uniform 15107; //1000*9.81*1.54m
     }
 
     Wall

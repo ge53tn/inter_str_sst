@@ -13,7 +13,7 @@ FoamFile
     object      sampleDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
+// sampling for Paraview longituninal cross-section
 
 type surfaces;
 libs ("libsampling.so");

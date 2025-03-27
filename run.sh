@@ -1,19 +1,17 @@
 #!/bin/sh
 
-blockMesh > log.blockMesh 2>&1
+blockMesh 
 
-surfaceFeatureExtract > log.surfaceFeatureExtract 2>&1
+surfaceFeatureExtract 
 
-snappyHexMesh -overwrite > log.snappyHexMesh 2>&1
+snappyHexMesh -overwrite 
 
 setFields
 
-rm log.*
+decomposePar 
 
-decomposePar > log.decomposePar 2>&1
+mpirun -np 7 interFoam -parallel 
 
-mpirun -np 8 interFoam -parallel > log.simpleFoam 2>&1
-
-reconstructPar > log.reconstructPar 2>&1
+reconstructPar 
 
 rm -rf proc* 

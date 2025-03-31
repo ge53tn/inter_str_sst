@@ -22,7 +22,8 @@ boundaryField
 {
     Inlet
     {
-        type            zeroGradient;
+        type            fixedValue;
+        value           uniform 1; // Ensures water enters up to 1.54m
     }
 
     Outlet
